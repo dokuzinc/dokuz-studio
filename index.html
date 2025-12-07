@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <title>Studio Dokuz</title>
+</head>
+<body>
+  <div class="head1">
+    <div class="top-menu">
+      <span class="menu-baslik">ABOUT</span>
+      <span class="menu-baslik">CUSTOMERS</span>
+      <span class="menu-baslik">PROJECTS</span>
+      <span class="menu-baslik">CONTACT</span>
+    </div>
+    <div class="head2">
+        <div class="container">
+            <img src="welcomen-bice2.png" alt="gorsel" class="parallax-img">
+        </div>
+    </div>
+  
+<div class="ticker-wrapper top">
+    <div class="ticker">      
+      <span class="top-text-color">✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ 
+        THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦
+      </span>
+    </div>
+  </div>
+
+  <div class="ticker-wrapper bottom">
+    <div class="ticker reverse">
+      <span class="bottom-text-color">✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ 
+        THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦ THE BEST SOLUTION ✦</span>
+    </div>
+  </div>
+</div>
+
+    <script>
+      const container = document.querySelector('.container');
+      const image = document.querySelector('.parallax-img');
+
+      container.addEventListener('mousemove', (e) => {
+        const { offsetX, offsetY } = e;
+        const { offsetWidth, offsetHeight } = container;
+
+        const moveX = ((offsetX / offsetWidth) - 0.5) * 30;
+        const moveY = ((offsetY / offsetHeight) - 0.5) * 30;
+
+        image.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+
+      container.addEventListener('mouseleave', () => {
+        image.style.transform = 'translate(0, 0)';
+      });
+    </script>
+
+ <section class="about-section">
+
+    <div class="circle left-circle top" id="left-circle-1"><img src="img/circle1.png" /></div>
+    <div class="circle left-circle bottom" id="left-circle-2"><img src="img/circle2.png" /></div>
+
+<div class="about-content">
+      <h1 class="about-me" id="about-title">ABOUT ME</h1>
+      <p class="about-text" id="about-text">
+        Hi! I'm Dokuz.
+I'm a versatile designer and developer who blends creativity with the power of technology. By day, I work in the fast-paced world of art direction; by night, I dive into game development, AI-generated visuals, and web projects.
+<br>
+<br>
+I have a strong interest in graphic design, UI/UX, 3D modeling, and cinematic visual aesthetics. I develop multiplayer games with Unity and create interactive 3D experiences on the web using Three.js. In my projects, I prioritize both visual detail and user experience.
+<br><br>
+I also enjoy staying creative through code—building Discord bots, mobile games, AI-powered visual systems, and animated web interfaces. I actively develop projects using languages like C#, C++, JavaScript, and Node.js.
+<br><br>
+In my spare time, I love creating cinematic-style photography, experimenting with analog film effects, and exploring new creative ideas. Sometimes, I just unwind with a good series or a fun game.
+<br><br>
+My multidisciplinary nature allows me to balance both technical and artistic skills, and I’m always eager to keep learning and evolving.
+      </p>
+    </div>
+
+     <div class="circle right-circle top" id="right-circle-1"><img src="img/circle3.png" /></div>
+    <div class="circle right-circle bottom" id="right-circle-2"><img src="img/circle4.png" /></div>
+
+    <script>
+const aboutTitle = document.getElementById("about-title");
+const aboutText = document.getElementById("about-text");
+const circles = document.querySelectorAll(".circle");
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  // baslik
+  if (scrollY > 650) {
+    aboutTitle.classList.add("filled");
+  } else {
+    aboutTitle.classList.remove("filled");
+  }
+
+  // Yazi gorunmeye baslasin
+  const textOffset = aboutText.offsetTop;
+  const windowHeight = window.innerHeight;
+  if (scrollY + windowHeight > textOffset + 50) {
+    aboutText.classList.add("reveal");
+  }
+
+  // Daireler gelsin
+  circles.forEach(circle => {
+    const offsetTop = circle.offsetTop;
+
+    if (scrollY + windowHeight > offsetTop + 50) {
+      circle.classList.add("reveal");
+    }
+  });
+});
+</script>
+
+ <div class="akis-gallery">
+
+<div class="tilted-wrapper">
+    <div class="tilted-gallery">
+      <img src="img/1.jpg" class="img-box">
+      <img src="img/2.jpg" class="img-box">
+      <img src="img/3.jpg" class="img-box">
+      <img src="img/4.jpg" class="img-box">
+      <img src="img/5.jpg" class="img-box">
+      <img src="img/6.jpg" class="img-box">
+      <img src="img/7.jpg" class="img-box">
+      <img src="img/8.jpg" class="img-box">
+      <img src="img/1.jpg" class="img-box">
+      <img src="img/2.jpg" class="img-box">
+      <img src="img/3.jpg" class="img-box">
+      <img src="img/4.jpg" class="img-box">
+      <img src="img/5.jpg" class="img-box">
+      <img src="img/6.jpg" class="img-box">
+      <img src="img/7.jpg" class="img-box">
+      <img src="img/8.jpg" class="img-box">
+    </div>
+  </div>
+
+
+<div class="tilted-wrapper2">
+    <div class="tilted-gallery2">
+      <img src="img/1.jpg" class="img-box">
+      <img src="img/2.jpg" class="img-box">
+      <img src="img/3.jpg" class="img-box">
+      <img src="img/4.jpg" class="img-box">
+      <img src="img/5.jpg" class="img-box">
+      <img src="img/6.jpg" class="img-box">
+      <img src="img/7.jpg" class="img-box">
+      <img src="img/8.jpg" class="img-box">
+      <img src="img/1.jpg" class="img-box">
+      <img src="img/2.jpg" class="img-box">
+      <img src="img/3.jpg" class="img-box">
+      <img src="img/4.jpg" class="img-box">
+      <img src="img/5.jpg" class="img-box">
+      <img src="img/6.jpg" class="img-box">
+      <img src="img/7.jpg" class="img-box">
+      <img src="img/8.jpg" class="img-box">
+      <img src="img/1.jpg" class="img-box">
+      <img src="img/2.jpg" class="img-box">
+      <img src="img/3.jpg" class="img-box">
+    </div>
+  </div>
+
+ <script>
+function createScrollGallery(selector, direction = 1) {
+  const gallery = document.querySelector(selector);
+  let lastScrollY = window.scrollY;
+  let velocity = 0;
+
+  function animate() {
+    const currentScrollY = window.scrollY;
+    velocity = (currentScrollY - lastScrollY) * 0.5 * direction;
+    lastScrollY = currentScrollY;
+
+    const currentTransform = parseFloat(gallery.dataset.offset || "0");
+    const newTransform = currentTransform + velocity;
+
+    gallery.dataset.offset = newTransform;
+    gallery.style.transform = `translateX(${-newTransform}px)`;
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+}
+
+// first sola kayiyor
+createScrollGallery('.tilted-gallery', 1);
+
+// İkinci saga kayiyor
+createScrollGallery('.tilted-gallery2', -1);
+</script>
+
+</div>
+
+<div class="services-parent">
+<h1 class="services" id="services-title">SERVICES</h1>
+
+<script>
+const servicesTitle = document.getElementById("services-title");
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  // baslik
+  // ScrollY değerleri CSS ile yeniden ayarlanacak
+  const triggerPoint = window.innerHeight * 2.5; // Tahmini yeni scroll noktası
+  if (scrollY > triggerPoint) {
+    servicesTitle.classList.add("filled");
+  } else {
+    servicesTitle.classList.remove("filled");
+  }
+  
+  });
+
+</script>
+
+ <section class="services-section">
+
+  <img src="img/set-1.png" class="icon icon-left" id="icon1">
+  <img src="img/set-2.png" class="icon icon-left" id="icon2">
+
+  <img src="img/set-3.png" class="icon icon-right" id="icon3">
+  <img src="img/set-4.png" class="icon icon-right" id="icon4">
+
+</section>
+
+<script>
+  window.addEventListener("scroll", () => {
+    document.querySelectorAll(".icon").forEach(icon => {
+      const rect = icon.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.8) {
+        if (icon.classList.contains("icon-left")) {
+          icon.classList.add("show-left");
+        } else {
+          icon.classList.add("show-right");
+        }
+      }
+    });
+  });
+</script>
+ <section class="scroll-section">
+  <div class="box hidden">
+    <span class="number">01</span>
+    <span class="title">Graphic Design</span>
+  </div>
+  <div class="box hidden">
+    <span class="number">02</span>
+    <span class="title">Web Design</span>
+  </div>
+  <div class="box hidden">
+    <span class="number">03</span>
+    <span class="title">Social Media Management</span>
+  </div>
+  <div class="box hidden">
+    <span class="number">04</span>
+    <span class="title">Digital Marketing</span>
+  </div>
+</section>
+
+<script>
+  const boxes = document.querySelectorAll('.box');
+
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.7;
+
+    boxes.forEach(box => {
+      const boxTop = box.getBoundingClientRect().top;
+
+      if (boxTop < triggerBottom) {
+        box.classList.add('show');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+
+</div>
+<div class="contact-me">
+<h1 class="contact" id="contact-title">CONTACT ME</h1>
+<script>
+const contactTitle = document.getElementById("contact-title");
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  // baslik
+  // ScrollY değerleri CSS ile yeniden ayarlanacak
+  const triggerPoint = window.innerHeight * 4; // Tahmini yeni scroll noktası
+  if (scrollY > triggerPoint) {
+    contactTitle.classList.add("filled");
+  } else {
+    contactTitle.classList.remove("filled");
+  }
+  
+  });
+
+</script>
+
+
+<div class="contact-section">
+
+  <div class="contact-form-wrapper">
+    <form class="contact-form">
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="E-mail">
+      <input type="tel" placeholder="Phone">
+      <textarea placeholder="Message.."></textarea>
+      <button type="submit">SUBMIT</button>
+    </form>
+  </div>
+
+  <img src="img/telefon.png" alt="Phone" class="contact-icon-left">
+  <img src="img/welcomen-bice23.png" alt="Avatar" class="contact-avatar-right">
+</div>
+ </body>
+</html>
